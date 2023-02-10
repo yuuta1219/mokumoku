@@ -21,5 +21,12 @@
     <%= f.file_field :thumbnail, class: 'form-control js-file-select-preview mb-3', accept: 'image/*', data: { target: '#preview-target' } %>
     <%= image_tag f.object.decorate.thumbnail, id: 'preview-target', class: 'w-100 border' %>
   </div>
+  <% if current_user.woman? %>
+    <div class="mb-3">
+    <%= f.label :Only_woman %>
+    <%= check_box :group, :user_ids, {class: "check_box"}, true, false %>
+    <div>
+  <% else %>
+  <% end %>
   <%= f.submit '登録', class: 'btn btn-primary' %>
 <% end %>
