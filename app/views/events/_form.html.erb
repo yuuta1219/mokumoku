@@ -23,8 +23,8 @@
   </div>
   <% if current_user.woman? %>
     <div class="mb-3">
-    <%= f.label :event_only_woman %>
-    <%= check_box :group, :only_woman, {class: "check_box"}, true, false %>
+      <%= f.label :only_woman %>
+      <%= f.check_box :only_woman, {class: "check_box"},checked:true %>
     <div>
   <% else %>
   <% end %>
