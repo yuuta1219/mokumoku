@@ -41,3 +41,4 @@ yarn-debug.log*
 
 /config/credentials/production.key
 /bin/webpack
+/bin/webpack-dev-server
